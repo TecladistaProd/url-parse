@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Source Sans Pro', sans-serif
+
+form
+    margin: 3rem auto
+    width: 45%
+    font-size: 1.3rem
+    label
+        font-weight: bold
+    input:not([type=button])
+        color: #555
+        width: 100%
+        padding: .2rem .5rem
+        margin: 1.5rem 0
+        border-radius: 10px     
+        box-shadow: 0 0 3px 0 #353535
+        &:focus
+            box-shadow: 0 0 3px 0 #25a25a
+    input, label, button
+        font-size: 1em
+        border: none
+    button
+        padding: .5rem .7rem
+        border-radius: 10px
+        background: #32aaff
+        &:hover
+            background: #32afaf
+        &:active
+            background: #32cfff
+        
+#properties
+    margin: 3rem auto
+    width: 45%
+    font-size: 1.3rem
+    list-style: none
+    li
+        padding: 1rem
+        &:nth-child(odd)
+            background: #333
+            color: #eee
+            span
+                text-shadow: 1px 1px 3px #2fafaf
+        &:nth-child(even)
+            background: #eee
+            color: #333
+            span
+                text-shadow: 1px 1px 3px #5abcac
+
+.alinha
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+.wave
+    width: 100px
+    height: 100px
+    background: #eee
+    border-radius: 50%
+    position: relative
+    margin: 2rem
+    align-self: center
+    display: inline-block
+    &:before, &:after
+        content: ''
+        display: block
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -50px
+        margin-left: -50px
+        background: orangered
+        animation: pulse 3s linear infinite
+        opacity: 0
+    &:after
+        animation: pulse 2s linear 2.3s infinite
+    
+@keyframes pulse
+  0%
+    transform: scale(0)
+    opacity: 1
+  100%
+    transform: scale(1.3)
+    opacity: 0

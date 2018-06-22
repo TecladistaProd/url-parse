@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Url Parse</title>
+<link href="src/css/main.css" rel="stylesheet"></head>
+<body>
+    <form>
+        <label>
+            Enter URL
+            <input type="text" placeholder="URL" value="https://www.youtube.com/watch?v=ckoegYJ1FR4"/>
+        </label>
+        <button type="submit">Parse URL</button>
+    </form>
+    <ul id="properties" hidden>
+        <li>Protocol: <span></span></li>
+        <li>Domain: <span></span></li>
+        <li>Path: <span></span></li>
+        <li>Search: <span></span></li>        
+    </ul>
+    <div class="alinha" style="display:none;">
+        <div class="wave">
+        </div>
+        Loading...
+    </div>
+<script type="text/javascript" src="src/js/bundle.js"></script></body>
+</html>
